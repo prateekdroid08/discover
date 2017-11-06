@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="height_300dp">300dp</dimen>
+    <dimen name="height_50dp">50dp</dimen>
+    <dimen name="text_18sp">18sp</dimen>
+    <dimen name="text_16sp">16sp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="width_200dp">200dp</dimen>
+    <dimen name="text_26sp">26sp</dimen>
+</resources>

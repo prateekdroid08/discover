@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/image1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_user_pic"
+                android:layout_width="@dimen/height_50dp"
+                android:layout_height="@dimen/height_50dp"
+                android:src="@drawable/ic_user_default_img" />
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:layout_toRightOf="@+id/iv_user_pic"
+                android:text="Zendaya Darwin"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_18sp" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_user_name"
+                android:layout_toRightOf="@+id/iv_user_pic"
+                android:text="October 13, 2017"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:src="@drawable/ic_heart_icon" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_image_title"
+            android:layout_width="@dimen/width_200dp"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:layout_margin="20dp"
+            android:layout_gravity="bottom"
+            android:textStyle="bold"
+            android:text="FLY.\nTRAVEL.\nEXPLORE."
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_26sp" />
+
+    </FrameLayout>
+
+</RelativeLayout>
