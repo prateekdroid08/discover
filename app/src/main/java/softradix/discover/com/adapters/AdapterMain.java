@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
@@ -28,6 +29,7 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import softradix.discover.com.R;
+import softradix.discover.com.interfaces.OnCategoryClick;
 import softradix.discover.com.view.activities.ActivityMain;
 
 /**
@@ -38,15 +40,17 @@ public class AdapterMain extends RecyclerView.Adapter<AdapterMain.RecyclerViewHo
 
     Context context;
     LayoutInflater inflater;
+    OnCategoryClick onCategoryClick;
 
     int[] myImageList = new int[]{R.drawable.image1, R.drawable.image2, R.drawable.image3,
             R.drawable.image4, R.drawable.image5, R.drawable.image6, R.drawable.image7,
             R.drawable.image8, R.drawable.image9, R.drawable.image10
             , R.drawable.image11, R.drawable.image12, R.drawable.image13};
 
-    public AdapterMain(Context context) {
+    public AdapterMain(Context context, OnCategoryClick onCategoryClick) {
         inflater = LayoutInflater.from(context);
         this.context = context;
+        this.onCategoryClick = onCategoryClick;
         displayMetrics = new DisplayMetrics();
         ((ActivityMain) context).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
     }
@@ -68,6 +72,13 @@ public class AdapterMain extends RecyclerView.Adapter<AdapterMain.RecyclerViewHo
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .crossFade()
                 .into(holder.imageView);
+
+        holder.frameLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onCategoryClick.onCategoryClick();
+            }
+        });
     }
 
     @Override
@@ -79,6 +90,8 @@ public class AdapterMain extends RecyclerView.Adapter<AdapterMain.RecyclerViewHo
 
         @Bind(R.id.imageView)
         ImageView imageView;
+        @Bind(R.id.frame_layout)
+        FrameLayout frameLayout;
 
         public RecyclerViewHolder(View itemView) {
             super(itemView);
