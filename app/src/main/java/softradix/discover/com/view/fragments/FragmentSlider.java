@@ -42,7 +42,7 @@ public class FragmentSlider extends Fragment {
 
     private MyViewPagerAdapter myViewPagerAdapter;
     private TextView[] dots;
-    int[] myImageList = new int[]{R.drawable.sliding_image1, R.drawable.sliding_image2, R.drawable.sliding_image3,
+    int[] myImageList = new int[]{R.drawable.sliding_image2, R.drawable.sliding_image3,
             R.drawable.sliding_image4, R.drawable.sliding_image5, R.drawable.sliding_image6, R.drawable.sliding_image7,
             R.drawable.sliding_image8, R.drawable.sliding_image9, R.drawable.sliding_image10
             , R.drawable.sliding_image11, R.drawable.sliding_image12, R.drawable.sliding_image13,
@@ -66,7 +66,7 @@ public class FragmentSlider extends Fragment {
             getActivity().getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         }
 
-        View view = inflater.inflate(R.layout.fragment_slider, container, false);
+        View view = inflater.inflate(R.layout.activity_slider, container, false);
 
         ButterKnife.bind(this, view);
 

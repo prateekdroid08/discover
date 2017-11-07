@@ -37,7 +37,7 @@ public class ActivitySlider extends AppCompatActivity{
 
     private MyViewPagerAdapter myViewPagerAdapter;
     private TextView[] dots;
-    int[] myImageList = new int[]{R.drawable.sliding_image1, R.drawable.sliding_image2, R.drawable.sliding_image3,
+    int[] myImageList = new int[]{R.drawable.sliding_image2, R.drawable.sliding_image3,
             R.drawable.sliding_image4, R.drawable.sliding_image5, R.drawable.sliding_image6, R.drawable.sliding_image7,
             R.drawable.sliding_image8, R.drawable.sliding_image9, R.drawable.sliding_image10
             , R.drawable.sliding_image11, R.drawable.sliding_image12, R.drawable.sliding_image13,
@@ -62,7 +62,7 @@ public class ActivitySlider extends AppCompatActivity{
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         }
 
-        setContentView(R.layout.fragment_slider);
+        setContentView(R.layout.activity_slider);
 
         ButterKnife.bind(this);
         // adding bottom dots
@@ -135,12 +135,12 @@ public class ActivitySlider extends AppCompatActivity{
             // changing the next button text 'NEXT' / 'GOT IT'
             if (position == myImageList.length - 1) {
                 // last page. make button text to GOT IT
-                btnNext.setText(getString(R.string.start));
+                //btnNext.setText(getString(R.string.start));
                 btnSkip.setVisibility(View.GONE);
             } else {
                 // still pages are left
                 btnNext.setText(getString(R.string.next));
-                btnSkip.setVisibility(View.VISIBLE);
+                //btnSkip.setVisibility(View.VISIBLE);
             }
         }
 
